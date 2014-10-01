@@ -20,6 +20,10 @@ Vagrant.configure("2") do |config|
   end
 
 
+  # Install puppet  
+  config.vm.provision "shell", path: "../../installPuppetOnUbuntu.sh", privileged: "true"
+
+
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "manifests"
     puppet.module_path = "modules"
