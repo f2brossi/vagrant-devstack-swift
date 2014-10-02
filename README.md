@@ -6,10 +6,8 @@ Automate the creation of an openstack VM with devstack installed, running Swift 
 
 ## Prereqs
 
-Install [Vagrant 1.1+](http://vagrantup.com) on your local machine first.
-An account on an openstack cloud provider (Numergy,  CloudWatt) with "OS_USERNAME, "OS_PASSWORD" and "OS_TENANT_ID"
-
-NB: Of course you can use instead virtualbox but then 8GB of RAM are needed on your engine.
+Install [Vagrant 1.1+](http://vagrantup.com) on your local engine.
+Open an account on ane openstack cloud provider. An alternative is to use virtualbox on your engine with at least 8GB of RAM availables. Never launch devstack on your desktop as it can corrupt your environnement.
 
  ## Boot the remote virtual machine and install DevStack
 
