@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "hosts.sh", privileged: "true"
 
   config.vm.provision "puppet" do |puppet|
-      puppet.module_path = "puppet/modules/devstack/"
+      puppet.module_path = "puppet/modules"
       puppet.manifests_path = "."
       puppet.manifest_file = "puppet/init.pp"
       puppet.options = "--verbose --debug"

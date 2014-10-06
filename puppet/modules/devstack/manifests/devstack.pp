@@ -8,18 +8,13 @@ class devstack::devstack( $dir = '/home/stack/devstack') {
 
   $branch = 'master'
 
-
-  vcsrepo { 'devstack':
-    path     => '/home/stack/devstack',
-    ensure   => present,
-    provider => git,
-    source   => 'https://github.com/openstack-dev/devstack.git',
-    revision => $version,
-    owner    => 'stack',
-    group    => 'stack',
-    require  => Package['git'],
-  }
-
+    exec {"install devstack":
+    	 command => "git clone https://github.com/openstack-dev/devstack.git",
+	 cwd     => '/home/stack/',
+         path => "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:.",
+	 user    => 'stack',
+	 require => Package['git'],
+   }
 
 
   file { "$dir/local.conf":
@@ -29,6 +24,7 @@ class devstack::devstack( $dir = '/home/stack/devstack') {
     owner => 'stack',
     group => 'stack',
     mode  => 644,
+    require => Exec['install devstack'],
   }
 
   exec {"stack.sh":
