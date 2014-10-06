@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     test.vm.provider :openstack do |os|
       os.server_name = "test-devstack"
       os.floating_ip = ENV['OS_FLOATING_IP']
-      os.flavor = '2_vCPU_RAM_4G_HD_10G'
+      os.flavor = '4_vCPU_RAM_8G_HD_10G'
       os.image = 'ubuntu-12.04_x86-64_3.11-DEPRECATED'
       os.ssh_username = "stack"
       os.networks = ['net']
