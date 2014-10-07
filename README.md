@@ -26,4 +26,6 @@ Open an account on ane openstack cloud provider. An alternative is to use virtua
  It will take at least ten minutes for this to run.
 
 
+## Provisionning
 
+For now with puppet. Ansible version coming qsoon
