@@ -7,7 +7,9 @@ Automate the creation of an openstack VM with devstack installed, running Swift 
 ## Prereqs
 
 Install [Vagrant 1.1+](http://vagrantup.com) on your local engine.
-Open an account on ane openstack cloud provider. An alternative is to use virtualbox on your engine with at least 8GB of RAM availables. Never launch devstack on your desktop as it can corrupt your environnement.
+Open an account on your openstack cloud provider and create an tenant with a firewall openbar.
+
+An alternative is to use virtualbox on your engine with at least 8GB of RAM availables. Never launch devstack on your desktop as it can corrupt your environnement.
 
  ## Boot the remote virtual machine and install DevStack
 
@@ -21,9 +23,11 @@ Open an account on ane openstack cloud provider. An alternative is to use virtua
   1. Download an Ubuntu 13.10 (saucy) vagrant box if it hasn't previously been downloaded to your machine.
   2. Boot the virtual machine (VM) on your openstack cloud provider .
   3. Clone the DevStack git repository inside of the VM.
-  4. Run DevStack inside of the VM.
+  4. Run manually DevStack inside of the VM with command >/home/stack/devstack/stack.sh
 
  It will take at least ten minutes for this to run.
 
 
+## Provisionning
 
+For now with puppet. Ansible version coming soon
