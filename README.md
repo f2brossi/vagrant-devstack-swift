@@ -7,7 +7,9 @@ Automate the creation of an openstack VM with devstack installed, running Swift 
 ## Prereqs
 
 Install [Vagrant 1.1+](http://vagrantup.com) on your local engine.
-Open an account on ane openstack cloud provider. An alternative is to use virtualbox on your engine with at least 8GB of RAM availables. Never launch devstack on your desktop as it can corrupt your environnement.
+Open an account on your openstack cloud provider and create an tenant with a firewall openbar.
+
+An alternative is to use virtualbox on your engine with at least 8GB of RAM availables. Never launch devstack on your desktop as it can corrupt your environnement.
 
  ## Boot the remote virtual machine and install DevStack
 
@@ -28,4 +30,4 @@ Open an account on ane openstack cloud provider. An alternative is to use virtua
 
 ## Provisionning
 
-For now with puppet. Ansible version coming qsoon
+For now with puppet. Ansible version coming soon
