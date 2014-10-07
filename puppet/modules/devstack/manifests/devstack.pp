@@ -27,14 +27,14 @@ class devstack::devstack( $dir = '/home/stack/devstack') {
     require => Exec['install devstack'],
   }
 
-  exec {"stack.sh":
-    require => File["$dir/local.conf"],
-    cwd => $dir,
-    path => "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:.",
-    environment => "HOME=/home/stack",
-    user => 'stack',
-    group => 'stack',
-    command => "$dir/stack.sh",
-    timeout => 0
-  }
+ # exec {"stack.sh":
+  #  require => File["$dir/local.conf"],
+   # cwd => $dir,
+   # path => "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:.",
+   # environment => "HOME=/home/stack",
+   # user => 'stack',
+   # group => 'stack',
+   # command => "$dir/stack.sh",
+   # timeout => 0
+  #}
 }
