@@ -23,7 +23,7 @@ An alternative is to use virtualbox on your engine with at least 8GB of RAM avai
   1. Download an Ubuntu 13.10 (saucy) vagrant box if it hasn't previously been downloaded to your machine.
   2. Boot the virtual machine (VM) on your openstack cloud provider .
   3. Clone the DevStack git repository inside of the VM.
-  4. Run DevStack inside of the VM.
+  4. Run manually DevStack inside of the VM with command >/home/stack/devstack/stack.sh
 
  It will take at least ten minutes for this to run.
 
