@@ -28,6 +28,6 @@ An alternative is to use virtualbox on your engine with at least 8GB of RAM avai
  It will take at least ten minutes for this to run.
 
 
-## Provisionning
+## Provisioning
 
-For now with puppet. Ansible version coming soon
+For now with puppet. 
